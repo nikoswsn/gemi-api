@@ -22,6 +22,8 @@ Set up your API configuration, including the base URL and any required headers, 
 ```typescript
 import gemi from 'gemi-api';
 
+gemi.init(YOUR_API_KEY)
+
 try {
     const companyDetails = await gemi.companies.getByArGemi(arGemi);
     console.log(companyDetails);
@@ -30,24 +32,12 @@ try {
 }
 ```
 
-## Directory Structure
-```bash
-src/
-├── api/
-│   ├── companies/               # Companies-related API operations
-│   ├── metadata/                # Metadata-related API operations
-│   └── companyDocuments/        # Document-related API operations
-├── config/                      # API configuration
-├── types/                       # Shared types and interfaces
-├── utils/                       # Utility functions
-└── index.ts                     # Main entry point
-```
 
 ## Testing
 To run tests, use the following command:
 
 ```bash
-npm test
+npm run test
 ```
 
 ## Contributing
